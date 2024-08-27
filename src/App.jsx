@@ -13,8 +13,6 @@ import SignUpPage from './pages/SignUpPage';
 import ProductUpload from './pages/ProductUpload';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import CSS for toast notifications
-import CheckoutForm from './pages/CheckoutForm';
-import CheckoutPage from './pages/CheckoutPage';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentCancelled from './pages/PaymentCancelled';
 import { useDispatch } from 'react-redux';
@@ -48,7 +46,6 @@ const App = () => {
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/categoryName/:categoryName" element={<CategoryPage />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<CheckoutPage  />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/uploadProduct" element={<ProductUpload />} />
