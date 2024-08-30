@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import ContactPage from './ContactPage';
 import HomePage from './components/HomePage';
 import Productdetails from './components/productdetails';
-import Grid from './components/grid';
+// import Grid from './components/grid';
+import Grid from './components/Grid'
 import Cart from './components/Cart';
 import Header from './components/Header';
 import Login from './components/Login';
