@@ -6,7 +6,7 @@ function ProductDetails() {
     <div>
       <SingleProduct />
     </div>
-  )
+  ) 
 }
 
 export default ProductDetails
