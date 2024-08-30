@@ -51,7 +51,7 @@ const SingleProduct = ({ product }) => {
     );
 };
 
-function Grid() {
+function Category() {
     const { categoryName } = useParams(); // Get the category name from URL params
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -353,4 +353,4 @@ function Grid() {
     )
 }
 
-export default Grid
+export default Category

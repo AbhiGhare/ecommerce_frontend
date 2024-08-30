@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import ProductDetails from './components/ProductDetails';
 // import Grid from './components/grid';
-import Grid from './components/Grid'
+import Category from './components/Category'
 import Cart from './components/Cart';
 import Header from './components/Header';
 import Login from './components/Login';
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
-        <Route path="/categoryName/:categoryName" element={<Grid />} />
+        <Route path="/categoryName/:categoryName" element={<Category />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUpPage />} />
