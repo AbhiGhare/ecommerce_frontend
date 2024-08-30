@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import AboutPage from './AboutPage';
 // import ContactPage from './ContactPage';
 import HomePage from './components/HomePage';
-import Productdetails from './components/productdetails';
+import ProductDetails from './components/ProductDetails';
 // import Grid from './components/grid';
 import Grid from './components/Grid'
 import Cart from './components/Cart';
@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product-details/:id" element={<Productdetails />} />
+        <Route path="/product-details/:id" element={<ProductDetails />} />
         <Route path="/categoryName/:categoryName" element={<Grid />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />

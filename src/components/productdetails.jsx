@@ -1,7 +1,7 @@
 import React from 'react'
 import SingleProduct from './SingleProduct'
 
-function Productdetails() {
+function ProductDetails() {
   return (
     <div>
       <SingleProduct />
@@ -9,4 +9,4 @@ function Productdetails() {
   )
 }
 
-export default Productdetails
+export default ProductDetails
