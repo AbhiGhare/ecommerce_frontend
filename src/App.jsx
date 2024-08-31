@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import AboutPage from './AboutPage';
 // import ContactPage from './ContactPage';
 import HomePage from './components/HomePage';
-import ProductDetails from './components/ProductDetails';
 // import Grid from './components/grid';
 import Category from './components/Category'
 import Cart from './components/Cart';
@@ -16,6 +15,7 @@ import PaymentSuccess from './components/PaymentSuccess';
 import PaymentCancelled from './components/PaymentCancelled';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import CSS for toast notifications
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (

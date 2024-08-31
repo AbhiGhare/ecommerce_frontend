@@ -51,7 +51,7 @@ const SingleProduct = ({ product }) => {
     );
 };
 
-function Category() {
+const  Category=()=> {
     const { categoryName } = useParams(); // Get the category name from URL params
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
