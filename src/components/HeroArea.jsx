@@ -9,7 +9,15 @@ import bg from '../assets/images/hero/slider-bg2.jpg'
 import bg1 from '../assets/images/hero/slider-bg1.jpg'
 import bg2 from '../assets/images/hero/slider-bnr.jpg'
 // import './HeroArea.css'; // Ensure your CSS is in place
+const formatPriceInINR = (price) => {
+  // console.log(price, 'price');
+  // console.log(typeof (price), 'price');
 
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+  }).format(price);
+};
 const HeroArea = () => {
   useEffect(() => {
     // Function to initialize Tiny Slider
@@ -84,17 +92,17 @@ const HeroArea = () => {
                 >
                   <div className="content">
                     <h2>
-                      <span>No restocking fee ($35 savings)</span>
+                      <span>No restocking fee (35 savings)</span>
                       M75 Sport Watch
                     </h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <h3>
-                      <span>Now Only</span> $320.99
+                      <span>Now Only</span> {formatPriceInINR(320)}
                     </h3>
                     <div className="button">
-                      <a href="product-grids.html" className="btn">Shop Now</a>
+                      <a href="#" className="btn">Shop Now</a>
                     </div>
                   </div>
                 </div>
@@ -114,10 +122,10 @@ const HeroArea = () => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <h3>
-                      <span>Combo Only:</span> $590.00
+                      <span>Combo Only:</span> {formatPriceInINR(590)}
                     </h3>
                     <div className="button">
-                      <a href="product-grids.html" className="btn">Shop Now</a>
+                      <a href="#" className="btn">Shop Now</a>
                     </div>
                   </div>
                 </div>
@@ -139,7 +147,7 @@ const HeroArea = () => {
                       <span>New line required</span>
                       iPhone 12 Pro Max
                     </h2>
-                    <h3>$259.99</h3>
+                    <h3>{formatPriceInINR(259)}</h3>
                   </div>
                 </div>
                 {/* End Small Banner */}
@@ -151,7 +159,7 @@ const HeroArea = () => {
                     <h2>Weekly Sale!</h2>
                     <p>Saving up to 50% off all online store items this week.</p>
                     <div className="button">
-                      <a className="btn" href="product-grids.html">Shop Now</a>
+                      <a className="btn" href="#">Shop Now</a>
                     </div>
                   </div>
                 </div>

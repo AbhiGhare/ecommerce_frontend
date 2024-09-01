@@ -6,6 +6,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { FaTrash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import OrderDeliveryPage from './OrderDeliveryPage';
 const stripePromise = loadStripe('pk_test_51PqzylF3Gw8WOVEszq0jJNerrtxK8hRYteyFXddZKmrUzodpMX5yglJiDLU7iudwy1ITLeoY11PrfOwUYWDgbFe800FWObyiB9');
 
 // CartItem component
@@ -87,8 +88,27 @@ const Cart = () => {
   const dispatch = useDispatch();
   const { items: productsInCart, status, error } = useSelector((state) => state.cart);
 
-
+  const getSessionUSer=async()=>{
+    try {
+      const token = localStorage.getItem('nayahe_hai');
+      if (token) {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/sessions/userSession`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        // return response.data; // Assuming response.data contains cart data with `cartItems`
+        console.log(JSON.stringify(response.data),'response.data');
+        
+      }
+    } catch (error) {
+      return rejectWithValue('Failed to fetch cart data');
+    }
+  }
   useEffect(() => {
+
+    getSessionUSer()
+
     const isLoggedIn = !!localStorage.getItem('nayahe_hai');
     if (isLoggedIn) {
       dispatch(fetchCartData());
@@ -98,6 +118,8 @@ const Cart = () => {
       });
       navigate('/login');
     }
+
+
     
   }, [dispatch]);
   console.log(productsInCart, 'productsInCart');
@@ -250,6 +272,7 @@ const Cart = () => {
             </div>
           </div>
         </div>
+        <OrderDeliveryPage/>
       </div>
     </div>
   );

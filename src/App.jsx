@@ -17,6 +17,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import CSS for toast notifications
 // import ProductDetails from './components/ProductDetails';
 import SingleProduct from './components/SingleProduct';
+import OrderDeliveryPage from './components/OrderDeliveryPage';
+import AdminOrderDeliveryPage from './components/AdminOrderDeliveryPage';
 
 function App() {
   return (
@@ -27,11 +29,13 @@ function App() {
         {/* <Route path="/product-details/:id" element={<ProductDetails />} /> */}
         <Route path="/product-details/:id" element={<SingleProduct />} />
         <Route path="/categoryName/:categoryName" element={<Category />} />
+        <Route path="/order" element={<OrderDeliveryPage />} />
+        <Route path="/admin_order" element={<AdminOrderDeliveryPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUpPage />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/sucess" element={<PaymentSuccess />} />
+        <Route path="/success/:sessionId" element={<PaymentSuccess />} />
         <Route path="/cancel" element={<PaymentCancelled />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         {/* Add more routes as needed */}

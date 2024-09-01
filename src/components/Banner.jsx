@@ -16,7 +16,7 @@ const Banner = () => {
                 <h2>Smart Watch 2.0</h2>
                 <p>Space Gray Aluminum Case with <br />Black/Volt Real Sport Band</p>
                 <div className="button">
-                  <a href="product-grids.html" className="btn">View Details</a>
+                  <a href="#" className="btn">View Details</a>
                 </div>
               </div>
             </div>
@@ -30,7 +30,7 @@ const Banner = () => {
                 <h2>Smart Headphone</h2>
                 <p>Lorem ipsum dolor sit amet, <br />eiusmod tempor incididunt ut labore.</p>
                 <div className="button">
-                  <a href="product-grids.html" className="btn">Shop Now</a>
+                  <a href="#" className="btn">Shop Now</a>
                 </div>
               </div>
             </div>

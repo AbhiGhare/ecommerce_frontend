@@ -9,7 +9,15 @@ import { addFavoriteProduct } from '../redux/slice/favoritesSlice';
 import { addToCart } from '../redux/slice/cartSlice';
 import { FaUserCircle, FaPhone, FaHeart, FaShoppingCart, FaChevronDown, FaChevronRight, FaTwitter, FaFacebookF, FaWhatsapp,FaBars  } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+const formatPriceInINR = (price) => {
+  console.log(price, 'price');
+  console.log(typeof (price), 'price');
 
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+  }).format(price);
+};
 const SingleProduct = () => {
   const { id } = useParams();  // Use the product ID from the route parameters
   // const dispatch = useDispatch();
@@ -167,7 +175,7 @@ const SingleProduct = () => {
                   <h2 className="title">{product?.name}</h2>
                   {/* <p className="category"><i className="lni lni-tag"></i> Drones: <a href="#">Action cameras</a></p> */}
                   {/* <h3 className="price">$850<span>$945</span></h3> */}
-                  <h3 className="price">${product?.price}</h3>
+                  <h3 className="price">{formatPriceInINR(product?.price)}</h3>
                   {/* <p className="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
                   <p className="info-text">{product?.description}</p>
                   {/* <div className="row">
